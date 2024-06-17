@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Veterinaria Sanitos</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar {
+            padding: 10px 20px;
+        }
+
+        .navbar-light {
+            background-color: #f8f9fa;
+        }
+
+        .navbar-dark {
+            background-color: #343a40;
+        }
+
+        .navbar-brand {
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+
+        .navbar-nav {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+
+        .nav-item {
+            margin-right: 15px;
+        }
+
+        .nav-link {
+            text-decoration: none;
+            color: #000;
+            font-size: 1.1em;
+        }
+
+        .nav-link:hover {
+            color: #007bff;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h1, h2 {
+            color: #343a40;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ced4da;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        .form-control:focus {
+            border-color: #80bdff;
+            box-shadow: 0 0 5px rgba(0, 123, 255, 0.25);
+        }
+
+        .btn-primary {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .btn-primary:hover {
+            background-color: #0056b3;
+        }
+
+        footer {
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        .footer-light {
+            background-color: #f8f9fa;
+        }
+
+        .footer-dark {
+            background-color: #343a40;
+            color: #fff;
+        }
+
+        .light-mode {
+            background-color: #fff;
+            color: #000;
+        }
+
+        .dark-mode {
+            background-color: #212529;
+            color: #fff;
+        }
+
+        .dark-mode .navbar-light .nav-link, .dark-mode h1, .dark-mode h2, .dark-mode p, .dark-mode .btn-primary {
+            color: #fff;
+        }
+
+        .dark-mode .form-control {
+            background-color: #495057;
+            color: #fff;
+            border-color: #6c757d;
+        }
+
+        .dark-mode .form-control:focus {
+            border-color: #80bdff;
+            box-shadow: 0 0 5px rgba(128, 189, 255, 0.25);
+        }
+
+        .mt-5 {
+            margin-top: 3rem !important;
+        }
+
+        .py-3 {
+            padding-top: 1rem !important;
+            padding-bottom: 1rem !important;
+        }
+        .adoption-list {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .adoption-list li {
+            margin-bottom: 10px;
+        }
+        .light-mode .adoption-list li {
+            display: inline;
+        }
+        .dark-mode .adoption-list li {
+            display: inline-block;
+        }
+    </style>
+    <script>
+        function setLightMode() {
+            document.body.classList.add('light-mode');
+            document.body.classList.remove('dark-mode');
+        }
+
+        function setDarkMode() {
+            document.body.classList.add('dark-mode');
+            document.body.classList.remove('light-mode');
+        }
+    </script>
+</head>
+<body class="light-mode">
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <a class="navbar-brand" href="#">Veterinaria Sanitos</a>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Inicio <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Servicios</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Nosotros</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contacto</a>
+                </li>
+                <li class="nav-item">
+                    <button class="btn btn-light" onclick="setLightMode()">Modo Claro</button>
+                </li>
+                <li class="nav-item">
+                    <button class="btn btn-dark" onclick="setDarkMode()">Modo Oscuro</button>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-lg-6">
+                <h1>Bienvenidos a Veterinaria Sanitos</h1>
+                <p>En Veterinaria Sanitos, nos preocupamos por el bienestar de tus mascotas. Ofrecemos una amplia gama de servicios para asegurar que tu amigo peludo esté siempre saludable.</p>
+                <img src="Veterinaria.jpg" class="img-fluid" alt="Veterinaria Sanitos">
+            </div>
+            <div class="col-lg-6">
+                <h2>Formulario de Registro</h2>
+                <form>
+                    <div class="form-group">
+                        <label for="nombre">Nombre</label>
+                        <input type="text" class="form-control" id="nombre" placeholder="Ingresa tu nombre">
+                    </div>
+                    <div class="form-group">
+                        <label for="apellido">Apellido</label>
+                        <input type="text" class="form-control" id="apellido" placeholder="Ingresa tu apellido">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Correo Electrónico</label>
+                        <input type="email" class="form-control" id="email" placeholder="Ingresa tu correo electrónico">
+                    </div>
+                    <div class="form-group">
+                        <label for="telefono">Teléfono</label>
+                        <input type="tel" class="form-control" id="telefono" placeholder="Ingresa tu teléfono">
+                    </div>
+                    <div class="form-group">
+                        <label for="mascota">Nombre de la Mascota</label>
+                        <input type="text" class="form-control" id="mascota" placeholder="Ingresa el nombre de tu mascota">
+                    </div>
+                    <div class="form-group">
+                        <label for="tipo-mascota">Tipo de Mascota</label>
+                        <select class="form-control" id="tipo-mascota">
+                            <option>Perro</option>
+                            <option>Gato</option>
+                            <option>Ave</option>
+                            <option>Otro</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Registrar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="container mt-5">
+        <h2>Objetos necesarios para adoptar una mascota:</h2>
+        <ul class="adoption-list">
+            <li>Juguetes</li>
+            <li>Comida adecuada</li>
+            <li>Cama confortable</li>
+            <li>Correa o arnés</li>
+            <li>Platos para comida y agua</li>
+            <li>Artículos de limpieza</li>
+        </ul>
+    </div>
+    <footer class="footer-light py-3 mt-5">
+        <div class="container text-center">
+            <p class="mb-0">&copy; 2024 Veterinaria Sanitos. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+</body>
+</html>
